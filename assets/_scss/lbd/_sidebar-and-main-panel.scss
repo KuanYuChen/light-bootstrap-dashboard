@@ -33,6 +33,24 @@ body > .navbar-collapse{
         background-size: cover;
         background-position: center center;
     }
+    .user{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 20px;
+        margin-top: 20px;
+
+        .photo{
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
 
     .logo{
         padding: 10px 15px 9px 15px;

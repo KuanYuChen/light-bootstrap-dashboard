@@ -9,57 +9,125 @@
         {% if page.brand != "template-page" %}
 
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="http://www.creative-tim.com" class="logo-text">
                 Creative Tim
             </a>
         </div>
+		<div class="logo logo-mini">
+			<a href="http://www.creative-tim.com" class="logo-text">
+				Ct
+			</a>
+		</div>
+
+    	<div class="sidebar-wrapper">
+
+            <div class="user">
+                <div class="photo">
+                    <img src="../../assets/img/default-avatar.png" />
+                </div>
+                <div class="info">
+                    <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                        Tania Andrew
+                        <b class="caret"></b>
+                    </a>
+                    <div class="collapse" id="collapseExample">
+                        <ul class="nav">
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">Edit Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
 
         <ul class="nav">
             <li {% if page.brand == "Dashboard" %} class="nav-item active" {% endif %}>
-                <a class="nav-link" href="dashboard.html">
+                <a class="nav-link" href="{{ path-pages }}/dashboard.html">
                     <i class="nc-icon nc-chart-pie-35"></i>
                     <p>Dashboard</p>
                 </a>
             </li>
+            <li class="dropdown nav-item">
+                  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="nc-icon nc-app"></i>
+                        <span>Components</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ path-pages }}/components/buttons.html">Buttons</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/components/grid.html">Grid System</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/components/icons.html">Icons</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/components/notifications.html">Notifications</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/components/panels.html">Panels</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/components/sweet-alert.html">Sweet Alert</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/components/typography.html">Typography</a>
+                  </ul>
+            </li>
+            <li class="dropdown nav-item">
+                  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="nc-icon nc-notes"></i>
+                        <span>Forms</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ path-pages }}/forms/regular.html">Regular Forms</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/forms/extended.html">Extended Forms</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/forms/validation.html">Validation Forms</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/forms/wizard.html">Wizard</a>
+                  </ul>
+            </li>
+            <li class="dropdown nav-item">
+                  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="nc-icon nc-paper-2"></i>
+                        <span>Tables</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ path-pages }}/tables/regular.html">Regular Tables</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/tables/extended.html">Extended Tables</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/tables/validation.html">Bootstrap Tables</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/tables/wizard.html">DataTables.net</a>
+                  </ul>
+            </li>
+            <li class="dropdown nav-item">
+                  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="nc-icon nc-pin-3"></i>
+                        <span>Maps</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ path-pages }}/maps/google.html">Google Maps</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/maps/vector.html">Vector Maps</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/maps/fullscreen.html">Full Screen Map</a>
+                  </ul>
+            </li>
+
+            <li {% if page.brand == "Components" %} class="nav-item active" {% endif %}>
+                <a class="nav-link" href="{{ path-pages }}/components.html">
+                    <i class="nc-icon nc-chart-bar-32"></i>
+                    <p>Charts</p>
+                </a>
+            </li>
             <li {% if page.brand == "User" %} class="nav-item active" {% endif %}>
-                <a class="nav-link" href="{{ path-pages }}/user.html">
-                    <i class="nc-icon nc-circle-09"></i>
-                    <p>User Profile</p>
-                </a>
-            </li>
-            <li {% if page.brand == "Table List" %} class="nav-item active" {% endif %}>
-                <a class="nav-link" href="{{ path-pages }}/table.html">
-                    <i class="nc-icon nc-notes"></i>
-                    <p>Table List</p>
-                </a>
-            </li>
-            <li {% if page.brand == "Typography" %} class="nav-item active" {% endif %}>
-                <a class="nav-link" href="{{ path-pages }}/typography.html">
-                    <i class="nc-icon nc-paper-2"></i>
-                    <p>Typography</p>
-                </a>
-            </li>
-            <li {% if page.brand == "Icons" %} class="nav-item active" {% endif %}>
-                <a class="nav-link" href="{{ path-pages }}/icons.html">
-                    <i class="nc-icon nc-atom"></i>
-                    <p>Icons</p>
-                </a>
-            </li>
-            <li {% if page.brand == "Maps" %} class="nav-item active" {% endif %}>
-                <a class="nav-link" href="{{ path-pages }}/maps.html">
-                    <i class="nc-icon nc-pin-3"></i>
-                    <p>Maps</p>
-                </a>
-            </li>
-            <li {% if page.brand == "Notifications" %} class="nav-item active" {% endif %}>
-                <a class="nav-link" href="{{ path-pages }}/notifications.html">
-                    <i class="nc-icon nc-bell-55"></i>
-                    <p>Notifications</p>
+                <a class="nav-link" href="{{ path-pages }}/calendar.html">
+                    <i class="nc-icon nc-single-copy-04"></i>
+                    <p>Calendar</p>
                 </a>
             </li>
 
+            <li class="dropdown nav-item">
+                  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="nc-icon nc-puzzle-10"></i>
+                        <span>Pages</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ path-pages }}/pages/login.html">Login Page</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/pages/register.html">Register Page</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/pages/lock.html">Lock Screen Page</a>
+                    <a class="dropdown-item" href="{{ path-pages }}/pages/user.html">User Page</a>
+                    <a class="dropdown-item" href="#lbd">More coming soon...</a>
+                  </ul>
+            </li>
+
             <li class="nav-item active active-pro">
-                    <a class="nav-link active" href="../examples/upgrade">
+                    <a class="nav-link active" href="{{ path-pages }}/examples/upgrade.html">
                         <i class="nc-icon nc-alien-33"></i>
                         <p>Upgrade to PRO</p>
                     </a>

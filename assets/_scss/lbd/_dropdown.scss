@@ -116,3 +116,40 @@
 .btn-group.select.show{
     overflow: visible;
 }
+
+// 
+// .sidebar{
+//     .dropdown{
+//         .dropdown-menu{
+//             position: static;
+//             float: none;
+//             width: auto;
+//             color: $white-color;
+//             margin-top: 0;
+//             display: none;
+//             background-color: transparent;
+//             border: 0;
+//             -webkit-box-shadow: none;
+//             box-shadow: none;
+//             @include transform-translate-y-dropdown(-50px);
+//
+//             .dropdown-item{
+//                 margin: 5px 15px 0px 15px;
+//                 border-radius: 4px;
+//                 color: $white-color;
+//                 opacity: .86;
+//                 padding: 8px 60px;
+//                 width: 88%;
+//                 font-size: 14px;
+//                 &:hover{
+//                     background-color: rgba(255, 255, 255, 0.23)
+//                 }
+//             }
+//         }
+//     }
+//     .dropdown.show{
+//         .dropdown-menu{
+//             display: block;
+//         }
+//     }
+// }
