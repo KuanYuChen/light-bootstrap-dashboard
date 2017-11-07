@@ -39,6 +39,8 @@ $(document).ready(function(){
         lbd.initRightMenu();
     }
 
+    lbd.initMinimizeSidebar();
+    
     //  Activate the tooltips
     $('[rel="tooltip"]').tooltip();
 
@@ -185,6 +187,60 @@ lbd = {
 
            toggle_initialized = true;
        }
+   },
+
+   initMinimizeSidebar: function(){
+
+       // when we are on a Desktop Screen and the collapse is triggered we check if the sidebar mini is active or not. If it is active then we don't let the collapse to show the elements because the elements from the collapse are showing on the hover state over the icons in sidebar mini, not on the click.
+       $('.sidebar .collapse').on('show.bs.collapse',function(){
+           if($(window).width() > 991){
+               if(lbd.misc.sidebar_mini_active == true){
+                   return false;
+               } else{
+                   return true;
+               }
+           }
+       });
+
+       $('#minimizeSidebar').click(function(){
+           var $btn = $(this);
+
+           if(lbd.misc.sidebar_mini_active == true){
+               $('body').removeClass('sidebar-mini');
+               lbd.misc.sidebar_mini_active = false;
+
+               if(isWindows){
+                   $('.sidebar .sidebar-wrapper').perfectScrollbar();
+               }
+
+           }else{
+
+               $('.sidebar .collapse').collapse('hide').on('hidden.bs.collapse',function(){
+                   $(this).css('height','auto');
+               });
+
+               if(isWindows){
+                   $('.sidebar .sidebar-wrapper').perfectScrollbar('destroy');
+               }
+
+               setTimeout(function(){
+                   $('body').addClass('sidebar-mini');
+
+                   $('.sidebar .collapse').css('height','auto');
+                   lbd.misc.sidebar_mini_active = true;
+               },300);
+           }
+
+           // we simulate the window Resize so the charts will get updated in realtime.
+           var simulateWindowResize = setInterval(function(){
+               window.dispatchEvent(new Event('resize'));
+           },180);
+
+           // we stop the simulation of Window Resize after the animations are completed
+           setTimeout(function(){
+               clearInterval(simulateWindowResize);
+           },1000);
+       });
    }
 }
 

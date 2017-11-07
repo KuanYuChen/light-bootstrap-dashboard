@@ -4,6 +4,13 @@
 
 		{% if page.brand != "documentation" %}
 
+		<div class="navbar-minimize">
+			<button id="minimizeSidebar" class="btn btn-warning btn-fill btn-round btn-icon">
+				<i class="fa fa-ellipsis-v visible-on-sidebar-regular"></i>
+				<i class="fa fa-navicon visible-on-sidebar-mini"></i>
+			</button>
+		</div>
+
 		<a class="navbar-brand" href="#pablo"> {{ page.brand }} </a>
 
 		{% else %}
@@ -23,18 +30,41 @@
 	    <div class="collapse navbar-collapse justify-content-end" id="navigation">
 			{% if page.brand != "documentation" %}
 			<ul class="nav navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a href="#" class="nav-link" data-toggle="dropdown">
-                        <i class="fa fa-dashboard hidden-sm-down"></i>
-						<i class="nc-icon nc-palette hidden-lg-up"></i>
+				<form class="navbar-form navbar-left navbar-search-form" role="search">
+					<div class="input-group">
+						<i class="nc-icon nc-zoom-split"></i>
+						<input type="text" value="" class="form-control" placeholder="Search...">
+					</div>
+				</form>
+            </ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#pablo">
+						<i class="fa fa-line-chart hidden-sm-down"></i>
+						<i class="nc-icon nc-planet hidden-lg-up"></i>
+						<span class="stats">Stats</span>
+					</a>
+				</li>
 
-						<span class="d-lg-none">Dashboard</span>
-                    </a>
-                </li>
-                <li class="dropdown nav-item">
-                      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                            <i class="fa fa-globe hidden-sm-down"></i>
+				<li class="dropdown nav-item">
+					  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<i class="fa fa-gavel hidden-sm-down"></i>
 							<i class="nc-icon nc-planet hidden-lg-up"></i>
+					  </a>
+					  <ul class="dropdown-menu">
+						<a class="dropdown-item" href="#">Create New Post</a>
+						<a class="dropdown-item" href="#">Manage Something</a>
+						<a class="dropdown-item" href="#">Do Nothing</a>
+						<a class="dropdown-item" href="#">Submit to live</a>
+						<li class="divider"></li>
+						<a class="dropdown-item" href="#">Another action</a>
+					  </ul>
+				</li>
+
+				<li class="dropdown nav-item">
+                      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            <i class="fa fa-bell-o hidden-sm-down"></i>
+							<i class="nc-icon nc-bell-55 hidden-lg-up"></i>
                             <span class="notification">5</span>
 							<span class="d-lg-none">Notification</span>
                       </a>
@@ -43,42 +73,34 @@
                         <a class="dropdown-item" href="#">Notification 2</a>
                         <a class="dropdown-item" href="#">Notification 3</a>
                         <a class="dropdown-item" href="#">Notification 4</a>
-                        <a class="dropdown-item" href="#">Another notification</a>
+                        <a class="dropdown-item" href="#">Notification 5</a>
                       </ul>
                 </li>
-                <li class="nav-item">
-                   <a href="#" class="nav-link">
-                        <i class="fa fa-search hidden-sm-down"></i>
-						<i class="nc-icon nc-zoom-split hidden-lg-up"></i>
-						<span class="d-lg-none">Search</span>
-                    </a>
-                </li>
-            </ul>
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="#pablo">
-						<span class="no-icon">Account</span>
-					</a>
-				</li>
+
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<span class="no-icon">Dropdown</span>
-
+						<i class="fa fa-list-ul hidden-sm-down"></i>
+						<i class="nc-icon nc-bullet-list-67 hidden-lg-up"></i>
 					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<a class="dropdown-item" href="#">Something</a>
-						<a class="dropdown-item" href="#">Something else here</a>
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="#">
+							<i class="nc-icon nc-email-85"></i> Messages
+						</a>
+						<a class="dropdown-item" href="#">
+							<i class="nc-icon nc-umbrella-13"></i> Help Center
+						</a>
+						<a class="dropdown-item" href="#">
+							<i class="nc-icon nc-settings-90"></i> Settings
+						</a>
 						<div class="divider"></div>
-						<a class="dropdown-item" href="#">Separated link</a>
+						<a class="dropdown-item" href="#">
+							<i class="nc-icon nc-lock-circle-open"></i> Lock Screen
+						</a>
+						<a href="#" class="dropdown-item text-danger">
+							<i class="nc-icon nc-button-power"></i>
+							Log out
+						</a>
 					</div>
-				</li>
-
-				<li class="nav-item">
-					<a class="nav-link" href="#pablo">
-					   <span class="no-icon">Log out</span>
-					</a>
 				</li>
 			</ul>
 
