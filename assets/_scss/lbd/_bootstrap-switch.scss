@@ -126,3 +126,35 @@
   width: 26px !important;
   margin: 2px -15px -13px -11px;
 }
+
+
+.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-danger  {
+  background-color: $color-red;
+}
+
+.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-warning  {
+  background-color: $color-orange;
+}
+
+.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-success  {
+  background-color: $color-green;
+}
+
+.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-primary  {
+  background-color: $color-blue;
+}
+
+.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-info  {
+  background-color: $color-azure;
+}
+.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-default  {
+  background-color: $color-black;
+}
+
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-danger,
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-primary,
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-info,
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-warning,
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-success {
+  background-color: #cfcfca;
+}

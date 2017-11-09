@@ -1,6 +1,10 @@
 @media (min-width: 992px){
+
+    .navbar-fixed{
+        width: calc(100% + 260px);
+    }
+
     .navbar-form {
-        margin-top: 30px;
         padding-left: 15px;
         padding-right: 5px;
 
@@ -20,6 +24,26 @@
 
     }
 
+    .sidebar-mini .sidebar .sidebar-wrapper > .nav [data-toggle="collapse"] ~ div > ul > li > a .sidebar-normal, .sidebar-mini .sidebar .sidebar-wrapper .user .info [data-toggle="collapse"] ~ div > ul > li > a .sidebar-normal, .sidebar-mini .sidebar .sidebar-wrapper .user .info > a > span,
+    .sidebar-mini .sidebar .sidebar-wrapper > .nav li > a span,
+    .sidebar-mini .sidebar .sidebar-wrapper > .nav li > a .caret{
+        @include transform-translate-3d(-25px);
+        opacity: 0;
+        display: inline-flex;
+    }
+
+    .sidebar-mini{
+        .sidebar{
+            .logo{
+                a.logo-mini{
+                    opacity: 1;
+                }
+                a.logo-normal{
+                    opacity: 0;
+                }
+            }
+        }
+    }
 
     .footer{
         height: 60px;
@@ -128,7 +152,7 @@
 
         .dropdown{
             .dropdown-menu{
-                position: static;
+                position: static !important;
                 float: none;
                 width: auto;
                 color: $white-color;
@@ -137,10 +161,11 @@
                 border: 0;
                 -webkit-box-shadow: none;
                 box-shadow: none;
-                        @include transition (0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+                transform: translate3d(0px, 0px, 0px) !important;
+                @include transition (0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
 
                 .dropdown-item{
-                    margin: 5px 15px 0px 40px;
+                    margin: 5px 15px 0px 15px;
                     border-radius: 4px;
                     color: $white-color;
                     opacity: .86;

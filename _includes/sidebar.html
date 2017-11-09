@@ -9,16 +9,14 @@
         {% if page.brand != "template-page" %}
 
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="logo-text">
-                Creative Tim
-            </a>
-        </div>
-		<div class="logo logo-mini">
-			<a href="http://www.creative-tim.com" class="logo-text">
-				Ct
-			</a>
-		</div>
+            <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+               Ct
+           </a>
 
+           <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+               Creative Tim
+           </a>
+		</div>
 
 
             <div class="user">
@@ -27,14 +25,31 @@
                 </div>
                 <div class="info ">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Margot Robbie
+                        <span class="user-name">Margot Robbie</span>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
-                            <li><a href="#">My Profile</a></li>
-                            <li><a href="#">Edit Profile</a></li>
-                            <li><a href="#">Settings</a></li>
+                            <li>
+								<a href="#pablo">
+									<span class="sidebar-mini">MP</span>
+									<span class="sidebar-normal">My Profile</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#pablo">
+									<span class="sidebar-mini">EP</span>
+									<span class="sidebar-normal">Edit Profile</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#pablo">
+									<span class="sidebar-mini">S</span>
+									<span class="sidebar-normal">Settings</span>
+								</a>
+							</li>
                         </ul>
                     </div>
                 </div>
@@ -45,38 +60,58 @@
             <li class="nav-item" {% if page.brand == "Dashboard" %} class="nav-item active" {% endif %}>
                 <a class="nav-link" href="{{ path-pages }}/dashboard.html">
                     <i class="nc-icon nc-chart-pie-35"></i>
-                    <p>Dashboard</p>
+                    <span>Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
                     <i class="nc-icon nc-app"></i>
-                    <span>Components
-                       <b class="caret"></b>
-                   </span>
+                    <span>Components</span>
+                    <b class="caret"></b>
                 </a>
                 <div class="collapse" id="componentsExamples">
                     <ul class="nav">
                         <li class="nav-item" {% if page.class == "buttons" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/components/buttons.html">Buttons</a>
+                            <a class="nav-link" href="{{ path-pages }}/components/buttons.html">
+                                <span class="sidebar-mini">B</span>
+								<span class="sidebar-normal">Buttons</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "grid" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/components/grid.html">Grid System</a>
+                            <a class="nav-link" href="{{ path-pages }}/components/grid.html">
+                                <span class="sidebar-mini">GS</span>
+								<span class="sidebar-normal">Grid System</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "icons" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/components/icons.html">Icons</a>
+                            <a class="nav-link" href="{{ path-pages }}/components/icons.html">
+                                <span class="sidebar-mini">P</span>
+								<span class="sidebar-normal">Panels</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "notifications" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/components/notifications.html">Notifications</a>
+                            <a class="nav-link" href="{{ path-pages }}/components/notifications.html">
+                                <span class="sidebar-mini">SA</span>
+								<span class="sidebar-normal">Sweet Alert</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "panels" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/components/panels.html">Panels</a>
+                            <a class="nav-link" href="{{ path-pages }}/components/panels.html">
+                                <span class="sidebar-mini">N</span>
+								<span class="sidebar-normal">Notifications</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "sweet-alert" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/components/sweet-alert.html">Sweet Alert</a>
+                            <a class="nav-link" href="{{ path-pages }}/components/sweet-alert.html">
+                                <span class="sidebar-mini">I</span>
+                                <span class="sidebar-normal">Icons</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "panels" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/components/typography.html">Typography</a>
+                            <a class="nav-link" href="{{ path-pages }}/components/typography.html">
+                                <span class="sidebar-mini">T</span>
+								<span class="sidebar-normal">Typography</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -85,23 +120,34 @@
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#formsExamples">
                     <i class="nc-icon nc-notes"></i>
-                    <span>Forms
-                       <b class="caret"></b>
-                   </span>
+                    <span>Forms</span>
+                    <b class="caret"></b>
                 </a>
                 <div class="collapse" id="formsExamples">
                     <ul class="nav">
                         <li class="nav-item" {% if page.class == "regular" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/forms/regular.html">Regular Forms</a>
+                            <a class="nav-link" href="{{ path-pages }}/forms/regular.html">
+                                <span class="sidebar-mini">Rf</span>
+								<span class="sidebar-normal">Regular Forms</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "extended" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/forms/extended.html">Extended Forms</a>
+                            <a class="nav-link" href="{{ path-pages }}/forms/extended.html">
+                                <span class="sidebar-mini">Ef</span>
+								<span class="sidebar-normal">Extended Forms</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "validation" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/forms/validation.html">Validation Forms</a>
+                            <a class="nav-link" href="{{ path-pages }}/forms/validation.html">
+                                <span class="sidebar-mini">Vf</span>
+								<span class="sidebar-normal">Validation Forms</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "wizard" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/forms/wizard.html">Wizard</a>
+                            <a class="nav-link" href="{{ path-pages }}/forms/wizard.html">
+                                <span class="sidebar-mini">W</span>
+								<span class="sidebar-normal">Wizard</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -110,23 +156,34 @@
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#tablesExamples">
                     <i class="nc-icon nc-paper-2"></i>
-                    <span>Tables
-                       <b class="caret"></b>
-                   </span>
+                    <span>Tables</span>
+                    <b class="caret"></b>
                 </a>
                 <div class="collapse" id="tablesExamples">
                     <ul class="nav">
                         <li class="nav-item" {% if page.class == "regular" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/tables/regular.html">Regular Tables</a>
+                            <a class="nav-link" href="{{ path-pages }}/tables/regular.html">
+                                <span class="sidebar-mini">RT</span>
+								<span class="sidebar-normal">Regular Tables</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "extended" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/tables/extended.html">Extended Tables</a>
+                            <a class="nav-link" href="{{ path-pages }}/tables/extended.html">
+                                <span class="sidebar-mini">ET</span>
+								<span class="sidebar-normal">Extended Tables</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "bootstrap-table" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/tables/bootstrap-table.html">Bootstrap Tables</a>
+                            <a class="nav-link" href="{{ path-pages }}/tables/bootstrap-table.html">
+                                <span class="sidebar-mini">BT</span>
+								<span class="sidebar-normal">Bootstrap Table</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "datatables.net" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/tables/datatables.net.html">DataTables.net</a>
+                            <a class="nav-link" href="{{ path-pages }}/tables/datatables.net.html">
+                                <span class="sidebar-mini">DT</span>
+								<span class="sidebar-normal">DataTables.net</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -135,20 +192,28 @@
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#mapsExamples">
                     <i class="nc-icon nc-pin-3"></i>
-                    <span>Maps
-                       <b class="caret"></b>
-                   </span>
+                    <span>Maps</span>
+                    <b class="caret"></b>
                 </a>
                 <div class="collapse" id="mapsExamples">
                     <ul class="nav">
                         <li class="nav-item" {% if page.class == "google" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/maps/google.html">Google Maps</a>
+                            <a class="nav-link" href="{{ path-pages }}/maps/google.html">
+                                <span class="sidebar-mini">GM</span>
+								<span class="sidebar-normal">Google Maps</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "vector" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/maps/vector.html">Vector Maps</a>
+                            <a class="nav-link" href="{{ path-pages }}/maps/vector.html">
+                                <span class="sidebar-mini">VM</span>
+								<span class="sidebar-normal">Vector maps</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "fullscreen.net" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/maps/fullscreen.net.html">Full Screen Map</a>
+                            <a class="nav-link" href="{{ path-pages }}/maps/fullscreen.net.html">
+                                <span class="sidebar-mini">FSM</span>
+								<span class="sidebar-normal">Full Screen Map</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -157,49 +222,56 @@
             <li class="nav-item" {% if page.brand == "Components" %} class="nav-item active" {% endif %}>
                 <a class="nav-link" href="{{ path-pages }}/charts.html">
                     <i class="nc-icon nc-chart-bar-32"></i>
-                    <p>Charts</p>
+                    <span>Charts</span>
                 </a>
             </li>
             <li class="nav-item" {% if page.brand == "User" %} class="nav-item active" {% endif %}>
                 <a class="nav-link" href="{{ path-pages }}/calendar.html">
                     <i class="nc-icon nc-single-copy-04"></i>
-                    <p>Calendar</p>
+                    <span>Calendar</span>
                 </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
                     <i class="nc-icon nc-puzzle-10"></i>
-                    <span>Pages
-                       <b class="caret"></b>
-                   </span>
+                    <span>Pages</span>
+                    <b class="caret"></b>
                 </a>
                 <div class="collapse" id="pagesExamples">
                     <ul class="nav">
                         <li class="nav-item" {% if page.class == "login" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/pages/login.html">Login Page</a>
+                            <a class="nav-link" href="{{ path-pages }}/pages/login.html">
+                                <span class="sidebar-mini">LP</span>
+								<span class="sidebar-normal">Login Page</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "register" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/pages/register.html">Register Page</a>
+                            <a class="nav-link" href="{{ path-pages }}/pages/register.html">
+                                <span class="sidebar-mini">RP</span>
+								<span class="sidebar-normal">Register Page</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "lock" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/pages/lock.html">Lock Screen Page</a>
+                            <a class="nav-link" href="{{ path-pages }}/pages/lock.html">
+                                <span class="sidebar-mini">LSP</span>
+								<span class="sidebar-normal">Lock Screen Page</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "user" %} class="active"{% endif %}>
-                            <a class="nav-link" href="{{ path-pages }}/pages/user.html">User Page</a>
+                            <a class="nav-link" href="{{ path-pages }}/pages/user.html">
+                                <span class="sidebar-mini">UP</span>
+								<span class="sidebar-normal">User Page</span>
+                            </a>
                         </li>
                         <li class="nav-item" {% if page.class == "notifications" %} class="active"{% endif %}>
-                            <a class="nav-link" href="#lbd">More coming soon...</a>
+                            <a class="nav-link" href="#lbd">
+                                <span class="sidebar-mini">MCS</span>
+								<span class="sidebar-normal">More coming soon...</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
-            </li>
-
-            <li class="nav-item active active-pro">
-                    <a class="nav-link active" href="{{ path-pages }}/examples/upgrade.html">
-                        <i class="nc-icon nc-alien-33"></i>
-                        <p>Upgrade to PRO</p>
-                    </a>
             </li>
         </ul>
         {% else %}

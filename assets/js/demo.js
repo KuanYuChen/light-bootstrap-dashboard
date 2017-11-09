@@ -86,7 +86,7 @@ $().ready(function(){
         }
     });
 
-    $('.switch input').on("switchChange.bootstrapSwitch", function(){
+    $('.switch-image input').on("switchChange.bootstrapSwitch", function(){
 
         $full_page_background = $('.full-page-background');
 
@@ -118,6 +118,64 @@ $().ready(function(){
             background_image = false;
         }
     });
+
+    $('.switch-mini input').on("switchChange.bootstrapSwitch",function(){
+            $body = $('body');
+
+            $input = $(this);
+
+            if(lbd.misc.sidebar_mini_active == true){
+                $('body').removeClass('sidebar-mini');
+                lbd.misc.sidebar_mini_active = false;
+
+                if(isWindows){
+                    $('.sidebar .sidebar-wrapper').perfectScrollbar();
+                }
+
+            }else{
+
+                $('.sidebar .collapse').collapse('hide').on('hidden.bs.collapse',function(){
+                    $(this).css('height','auto');
+                });
+
+                if(isWindows){
+                    $('.sidebar .sidebar-wrapper').perfectScrollbar('destroy');
+                }
+
+                setTimeout(function(){
+                    $('body').addClass('sidebar-mini');
+
+                    $('.sidebar .collapse').css('height','auto');
+                    lbd.misc.sidebar_mini_active = true;
+                },300);
+            }
+
+            // we simulate the window Resize so the charts will get updated in realtime.
+            var simulateWindowResize = setInterval(function(){
+                window.dispatchEvent(new Event('resize'));
+            },180);
+
+            // we stop the simulation of Window Resize after the animations are completed
+            setTimeout(function(){
+                clearInterval(simulateWindowResize);
+            },1000);
+
+        });
+
+        $('.switch-nav input').on("switchChange.bootstrapSwitch",function(){
+            $nav = $('nav.navbar').first();
+
+            $nav.toggleClass("navbar-fixed");
+
+            // if($nav.hasClass('navbar-fixed')){
+            //     $nav.removeClass('navbar-fixed').prependTo('.main-panel');
+            // } else {
+            //     $nav.prependTo('.wrapper').addClass('navbar-fixed');
+            // }
+
+        });
+
+
 });
 
 type = ['primary','info','success','warning','danger'];

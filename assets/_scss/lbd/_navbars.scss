@@ -374,3 +374,15 @@
         background-color: transparent;
     }
 }
+
+.main-panel{
+    .navbar-fixed{
+        position: fixed;
+        right: 0;
+        width: calc(100% - 260px);
+        z-index: 1030;
+    }
+    .navbar-fixed + .content{
+        padding-top: 90px;
+    }
+}

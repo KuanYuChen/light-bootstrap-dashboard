@@ -40,7 +40,7 @@ $(document).ready(function(){
     }
 
     lbd.initMinimizeSidebar();
-    
+
     //  Activate the tooltips
     $('[rel="tooltip"]').tooltip();
 
@@ -192,7 +192,7 @@ lbd = {
    initMinimizeSidebar: function(){
 
        // when we are on a Desktop Screen and the collapse is triggered we check if the sidebar mini is active or not. If it is active then we don't let the collapse to show the elements because the elements from the collapse are showing on the hover state over the icons in sidebar mini, not on the click.
-       $('.sidebar .collapse').on('show.bs.collapse',function(){
+       $('.sidebar .collapse').on('in.bs.collapse',function(){
            if($(window).width() > 991){
                if(lbd.misc.sidebar_mini_active == true){
                    return false;
