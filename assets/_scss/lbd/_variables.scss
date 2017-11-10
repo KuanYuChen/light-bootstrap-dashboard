@@ -61,17 +61,29 @@ $black-color-bottom: 	            #343434;
 
 
 $social-facebook: 			        #3b5998;
+$social-states-facebook: 			darken(#3b5998, 5%) !default;
 $social-twitter: 			        #55acee;
+$social-states-twitter: 			darken(#55acee, 5%) !default;
 $social-pinterest: 			        #cc2127;
+$social-states-pinterest: 			darken(#cc2127, 5%) !default;
 $social-google: 			        #dd4b39;
+$social-states-google: 			    darken(#dd4b39, 5%) !default;
 $social-linkedin: 			        #0976b4;
+$social-states-linkedin: 			darken(#0976b4, 5%) !default;
 $social-dribbble: 			        #ea4c89;
+$social-states-dribble: 	        darken(#ea4c89, 5%) !default;
 $social-github: 			        #333333;
+$social-states-github: 		        darken(#333333, 5%) !default;
 $social-youtube: 			        #e52d27;
+$social-states-youtube: 	        darken(#e52d27, 5%) !default;
 $social-stumbleupon: 		        #eb4924;
+$social-states-stumbleupon:	        darken(#eb4924, 5%) !default;
 $social-reddit: 			        #ff4500;
+$social-states-reddit: 		        darken(#ff4500, 5%) !default;
 $social-tumblr: 			        #35465c;
+$social-states-tumblr: 			    darken(#35465c, 5%) !default;
 $social-behance: 			        #1769ff;
+$social-states-behance: 	        darken(#1769ff, 5%) !default;
 
 
 $filter-blue:         darken($color-blue, 10%);
