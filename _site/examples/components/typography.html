@@ -430,11 +430,13 @@
                         <div class="container-fluid">
                             <div class="container-fluid">
 
-	<ol class="breadcrumb">
-			<li><a href="#">Breadcrumb 1</a></li>
-		<li><a href="#">Breadcrumb 2</a></li>
-		<li class="active">Current Page</li>
-	</ol>
+	<nav aria-label="breadcrumb" role="navigation">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Breadcrumb 1</a></li>
+			<li class="breadcrumb-item"><a href="#">Breadcrumb2</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Current Page</li>
+		</ol>
+	</nav>
 
     <div class="row">
         <div class="col-md-12">
@@ -446,28 +448,28 @@
                 <div class="card-body">
 
                     <div class="typo-line">
-                        <h1><p class="card-category">card-header 1</p>Light Bootstrap Table Heading </h1>
+                        <h1><p class="category">Header 1</p>Light Bootstrap Table Heading </h1>
                     </div>
                     <div class="typo-line">
-                        <h2><p class="card-category">card-header 2</p>Light Bootstrap Table Heading</h2>
+                        <h2><p class="category">Header 2</p>Light Bootstrap Table Heading</h2>
                     </div>
                     <div class="typo-line">
-                        <h3><p class="card-category">card-header 3</p>Light Bootstrap Table Heading</h3>
+                        <h3><p class="category">Header 3</p>Light Bootstrap Table Heading</h3>
                     </div>
                     <div class="typo-line">
-                        <h4><p class="card-category">card-header 4</p>Light Bootstrap Table Heading</h4>
+                        <h4><p class="category">Header 4</p>Light Bootstrap Table Heading</h4>
                     </div>
                     <div class="typo-line">
-                        <h5><p class="card-category">card-header 5</p>Light Bootstrap Table Heading</h5>
+                        <h5><p class="category">Header 5</p>Light Bootstrap Table Heading</h5>
                     </div>
                      <div class="typo-line">
-                        <h6><p class="card-category">card-header 6</p>Light Bootstrap Table Heading</h6>
+                        <h6><p class="category">Header 6</p>Light Bootstrap Table Heading</h6>
                     </div>
                     <div class="typo-line">
-                        <p><span class="card-category">Paragraph</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+                        <p><span class="category">Paragraph</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
                     </div>
                     <div class="typo-line">
-                        <p class="card-category">Quote</p>
+                        <p class="category">Quote</p>
                         <blockquote>
                          <p>
                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
@@ -479,7 +481,7 @@
                     </div>
 
                     <div class="typo-line">
-                        <p class="card-category">Muted Text</p>
+                        <p class="category">Muted Text</p>
                         <p class="text-muted">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.
                         </p>
@@ -488,7 +490,7 @@
                         <!--
                          there are also "text-info", "text-success", "text-warning", "text-danger" clases for the text
                          -->
-                        <p class="card-category">Coloured Text</p>
+                        <p class="category">Coloured Text</p>
                         <p class="text-primary">
                             Text Primary - Light Bootstrap Table Heading and complex bootstrap dashboard you've ever seen on the internet.
                         </p>
@@ -507,11 +509,11 @@
                     </div>
 
                     <div class="typo-line">
-                        <h2><p class="card-category">Small Tag</p>card-header with small subcard-title <br><small>".small" is a tag for the card-headers</small> </h2>
+                        <h2><p class="category">Small Tag</p>header with small subcard-title <br><small>".small" is a tag for the headers</small> </h2>
                     </div>
 
                     <div class="typo-line">
-                        <p class="card-category">Lists</p>
+                        <p class="category">Lists</p>
 
                         <div class="row">
                             <div class="col-md-3">
@@ -557,7 +559,7 @@
                     </div>
 
                     <div class="typo-line">
-                        <p class="card-category">Blockquotes</p>
+                        <p class="category">Blockquotes</p>
 
                         <div class="row">
                             <div class="col-md-6">
@@ -580,11 +582,11 @@
 
 
                     <div class="typo-line">
-                        <p class="card-category">Code</p>
+                        <p class="category">Code</p>
 
                             <p>This is <code>.css-class-as-code</code>, an example of an inline code element. Wrap inline code within a <code> &lt;code&gt;...&lt;/code&gt;</code>tag.</p>
                             <pre>1. #This is an example of preformatted text.
-								2. #Here is another line of code</pre>
+								 2. #Here is another line of code</pre>
 
                     </div>
 
@@ -657,7 +659,8 @@
                 <a href="javascript:void(0)" class="switch-trigger">
                     <p>Sidebar Mini</p>
                     <label class="switch-mini">
-                        <input type="checkbox" data-toggle="switch" data-on-color="info" data-off-color="info"><span class="toggle"></span>
+                        <input type="checkbox" data-toggle="switch" data-on-color="info" data-off-color="info">
+                        <span class="toggle"></span>
                     </label>
                     <div class="clearfix"></div>
                 </a>
@@ -666,7 +669,8 @@
                 <a href="javascript:void(0)" class="switch-trigger">
                     <p>Fixed Navbar</p>
                     <label class="switch-nav">
-                        <input type="checkbox" data-toggle="switch" data-on-color="info" data-off-color="info"><span class="toggle"></span>
+                        <input type="checkbox" data-toggle="switch" data-on-color="info" data-off-color="info">
+                        <span class="toggle"></span>
                     </label>
                     <div class="clearfix"></div>
                 </a>
@@ -755,6 +759,15 @@
 
 <!--  jVector Map  -->
 <script src="../../assets/js/plugins/jquery-jvectormap.js" type="text/javascript"></script>
+
+<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+<script src="../../assets/js/plugins/moment.min.js"></script>
+
+<!--  DatetimePicker   -->
+<script src="../../assets/js/plugins/bootstrap-datetimepicker.js"></script>
+
+<!--  Sweet Alert  -->
+<script src="../../assets/js/plugins/sweetalert2.min.js" type="text/javascript"></script>
 
 <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo.js"></script>

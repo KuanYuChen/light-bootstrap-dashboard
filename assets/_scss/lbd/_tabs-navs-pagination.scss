@@ -231,7 +231,7 @@
 .nav-icons{
     padding:  $padding-default-vertical 0 0;
 
-    > li > a{
+    .nav-item .nav-link{
         display: block;
         padding: 0px $padding-base-horizontal;
         color: $dark-gray;
@@ -244,12 +244,16 @@
             @include opacity(1);
         }
     }
-    > li:first-child a{
+    .nav-item:first-child .nav-link{
         padding-left: 0;
     }
-    > li.active a{
+    .nav-item .nav-link.active,
+    .nav-item.active .nav-link{
        color: $info-color;
     }
+    // .nav-item.active .nav-link.active{
+    //     color: $info-color;
+    // }
 }
 
 .nav-icons > li{
@@ -411,6 +415,18 @@
                     padding: 10px 15px;
                 }
             }
+        }
+    }
+}
+
+
+
+// PANELS
+
+.content-full-width{
+    .nav-tabs{
+        .nav-item:first-child{
+            padding-left: 15px;
         }
     }
 }
